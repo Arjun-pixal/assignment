@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Why Carbon Crunch?</title>
+    <style>
+        /* Global Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+
+        body {
+            background-color: #f5f5f5;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        /* Header Styles */
+        header {
+            text-align: center;
+            padding: 40px 0 20px;
+        }
+
+        .features-label {
+            color: #22c55e;
+            font-size: 14px;
+            background-color: #ffffff;
+            font-weight: bold;
+            width: fit-content;
+            margin: center;
+            padding: 20px 20px;
+            margin-left: 50%;
+            /* height: 30px; */
+            border-radius: 40px;
+            /* border: 2px solid #22c55e; */
+            text-transform: uppercase;
+            margin-bottom: 10px;
+        }
+
+        .main-heading {
+            font-size: 32px;
+            color: #333;
+            margin-left: 159px;
+            margin-bottom: 30px;
+        }
+
+        /* Features Section */
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            margin-bottom: 40px;
+            
+            border-radius: 10px;
+            padding: 20px;
+        }
+
+        .feature-card {
+            background-color: #f9fafb;
+            border-radius: 8px;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+
+        .feature-icon {
+            background-color: #dcfce7;
+            width: 40px;
+            height: 40px;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 15px;
+        }
+
+        .feature-icon img {
+            width: 24px;
+            height: 24px;
+        }
+
+        .feature-title {
+            color: #22c55e;
+            font-size: 18px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .feature-description {
+            font-size: 14px;
+            color: #6b7280;
+        }
+
+        /* Second Features Row */
+        .features-grid-2 {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            margin-bottom: 40px;
+        }
+
+        /* Stats Section */
+        .stats-container {
+            
+            border-radius: 10px;
+            padding: 20px;
+            display: grid;
+            grid-template-columns: 3fr 2fr;
+            gap: 20px;
+            position: relative;
+        }
+
+        .earth-image {
+            width: 724px;
+            border-radius: 8px;
+            position: relative;
+        }
+
+        .stats-overlay {
+            position: relative;
+        }
+
+        .stat-card {
+            position: absolute;
+            padding: 15px;
+            border-radius: 8px;
+            color: white;
+        }
+
+        .stat-card.black {
+            background-color: rgba(0, 0, 0, 0.8);
+        }
+
+        .stat-card.green {
+            background-color: #28B30E;
+        }
+
+        .stat-number {
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+        .stat-number1{
+            font-weight: 700;
+            font-size: 48px;
+        }
+        .stat-text {
+            font-size: 14px;
+        }
+
+        .stat-card.ceo {
+            top: 242.07px;
+            right: -212px;
+            height: 173.53426089678578px;
+            border-radius: 11.24px;
+            width: 492.0000317096674px;
+            background-color: #3a3a3a;
+            z-index: 5;
+        }
+
+        .stat-card.companies {
+            bottom: 229px;
+            left: 486px;
+            width: 414px;
+            background-color: #FFFFFF;
+            color: #28B30E;
+            font-weight: 400;
+            
+        }
+
+        .stat-card.emissions {
+            top: 391px;
+            right: 96px;
+            max-width: 380px;
+            background-color: #2d2d2d;
+        }
+
+        .stat-card.esg {
+            top: 150px;
+            right: 132px;
+            width: 405px;
+            height: 150px;
+            z-index: 12;
+        }
+
+        /* Responsive Styles */
+        @media (max-width: 992px) {
+            .features-grid, 
+            .features-grid-2 {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            
+            .stats-container {
+                grid-template-columns: 1fr;
+            }
+            
+            .stat-card.ceo,
+            .stat-card.emissions,
+            .stat-card.esg {
+                position: static;
+                margin-bottom: 15px;
+                max-width: 100%;
+            }
+            
+            .stat-card.companies {
+                position: static;
+                margin-bottom: 15px;
+                max-width: 100%;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .features-grid, 
+            .features-grid-2 {
+                grid-template-columns: 1fr;
+            }
+            
+            .main-heading {
+                font-size: 28px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="features-label">FEATURES</div>
+            <h1 class="main-heading">Why Carbon Crunch?</h1>
+        </header>
+
+        <section class="features-grid">
+            <!-- Feature 1 -->
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#22c55e" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                        <path d="M22 6l-10 7L2 6"></path>
+                    </svg>
+                </div>
+                <h3 class="feature-title">Automated Data Collection</h3>
+                <p class="feature-description">Our system automates carbon footprint tracking, reducing errors, and ensuring accurate sustainability reporting.</p>
+            </div>
+
+            <!-- Feature 2 -->
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#22c55e" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M12 20V10"></path>
+                        <path d="M18 20V4"></path>
+                        <path d="M6 20v-4"></path>
+                    </svg>
+                </div>
+                <h3 class="feature-title">Monitoring & Reporting</h3>
+                <p class="feature-description">Effortlessly track and report carbon emissions with automated monitoring, ensuring accuracy and compliance in sustainability reporting.</p>
+            </div>
+
+            <!-- Feature 3 -->
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#22c55e" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M12 20V10"></path>
+                        <path d="M18 20V4"></path>
+                        <path d="M6 20v-4"></path>
+                    </svg>
+                </div>
+                <h3 class="feature-title">Monitoring & Reporting</h3>
+                <p class="feature-description">Effortlessly track and report carbon emissions with automated monitoring, ensuring accuracy and compliance in sustainability reporting.</p>
+            </div>
+        </section>
+
+        <section class="features-grid-2">
+            <!-- Feature 4 -->
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#22c55e" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M22 11.08V12a10 10 0 11-5.93-9.14"></path>
+                        <path d="M22 4L12 14.01l-3-3"></path>
+                    </svg>
+                </div>
+                <h3 class="feature-title">Simplified Certification Process</h3>
+                <p class="feature-description">Streamline your certification process with our simplified, automated solution reducing complexity and ensuring total compliance.</p>
+            </div>
+
+            <!-- Feature 5 -->
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#22c55e" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M2 3h6a4 4 0 014 4v14a3 3 0 00-3-3H2z"></path>
+                        <path d="M22 3h-6a4 4 0 00-4 4v14a3 3 0 013-3h7z"></path>
+                    </svg>
+                </div>
+                <h3 class="feature-title">AI-Driven Insights</h3>
+                <p class="feature-description">Leverage AI-driven insights to uncover hidden patterns, optimize sustainability strategies, and drive impactful decision-making.</p>
+            </div>
+
+            <!-- Feature 6 -->
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#22c55e" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M2 3h6a4 4 0 014 4v14a3 3 0 00-3-3H2z"></path>
+                        <path d="M22 3h-6a4 4 0 00-4 4v14a3 3 0 013-3h7z"></path>
+                    </svg>
+                </div>
+                <h3 class="feature-title">AI-Driven Insights</h3>
+                <p class="feature-description">Leverage AI-driven insights to uncover hidden patterns, optimize sustainability strategies, and drive impactful decision-making.</p>
+            </div>
+        </section>
+
+        <section class="stats-container">
+            <div class="stats-overlay">
+                <img src="image copy.png" alt="Earth with industrial emissions" class="earth-image">
+                
+                <div class="stat-card green companies">
+                    <div class="stat-number1">37%</div>
+                    <div class="stat-text">Of The World's Largest Companies Have A Public Net Zero Target. Nearly All Are Off Track</div>
+                </div>
+                
+                <div class="stat-card black ceo">
+                    <div class="stat-number">98%</div>
+                    <div class="stat-text">Of CEOs Agree Sustainability Is Their Responsibility</div>
+                </div>
+            </div>
+            
+            <div class="stats-right">
+                <div class="stat-card green esg">
+                    <div class="stat-number" style="font-size: 50px;color: black;">3X</div>
+                    <div class="stat-text">ESG High Performers Deliver A Higher Total Shareholder Return</div>
+                </div>
+                
+                <div class="stat-card black emissions">
+                    <div class="stat-number" style="text-align: right;">18%</div>
+                    <div class="stat-text">Of Companies Are Cutting Emissions Fast Enough To Reach Net Zero By 2050</div>
+                </div>
+            </div>
+        </section>
+    </div>
+</body>
+</html>
